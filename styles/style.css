@@ -43,7 +43,7 @@ main {
 .players {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-row-gap: 30px;
+  grid-row-gap: 26px;
   grid-column-gap: 60px;
   }
 
@@ -121,7 +121,7 @@ hr {
 .courses {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 24px;
+  grid-column-gap: 54px;
 }
 .course {
   width: 252px;
@@ -188,6 +188,50 @@ hr {
   margin-right: 6px;
 }
 
-/*------------------------------------*\
-    Media Queries
-\*------------------------------------*/
+/*------------------------------------------------------------*\
+                        Media Queries
+\*------------------------------------------------------------*/
+
+/*----------------------*\
+      Mobile Devices
+\*----------------------*/
+
+@media only screen and (max-width:688px) 
+
+{
+.container
+{
+  width: 100%;
+}
+.players, .blogs, .courses
+{
+  grid-template-columns: repeat(1, 1fr);
+  
+}
+.player, .blog 
+{
+  flex-direction: column;
+}
+
+}
+
+/*----------------------*\
+      Tablet Devices
+\*----------------------*/
+
+@media only screen and (min-width:688px) and (max-width:992px)
+
+{
+.container
+{
+  width: 100%;
+}
+.players, .courses
+{
+  grid-template-columns: repeat(2, 1fr);
+}
+/* .player, .blog 
+{
+  flex-direction: column;
+} */
+}
